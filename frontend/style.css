@@ -324,36 +324,118 @@ footer {
     font-weight: bold;
 }
 
-/* Empty State Styling (Centered for all filters) */
-.empty-state {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
-    text-align: center;
-    color: var(--text);
+/* ========================= */
+/* 📱 MOBILE RESPONSIVENESS */
+/* ========================= */
+
+/* Small phones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 18px;
+    }
+
+    /* Header */
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo i {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Dashboard */
+    .dashboard {
+        gap: 15px;
+    }
+
+    .progress-card,
+    .add-todo,
+    .todo-section {
+        padding: 15px;
+    }
+
+    /* Progress section stack */
+    .progress-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats {
+        border-left: none;
+        border-top: 2px dashed var(--pastel-green);
+        padding-left: 0;
+        padding-top: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    /* Input */
+    #new-task,
+    #task-category,
+    #add-btn {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    /* Section header */
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Filters wrap properly */
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    /* Todo item */
+    .todo-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .todo-checkbox {
+        margin-right: 0;
+    }
+
+    .todo-actions {
+        align-self: flex-end;
+    }
 }
 
-.empty-state i {
-    font-size: 4rem;
-    color: var(--pastel-pink);
-    margin-bottom: 20px;
-    background: var(--white);
-    padding: 20px;
-    border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    border: 2px solid var(--pastel-pink);
-}
+/* Medium phones */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
 
-.empty-state h3 {
-    font-size: 1.4rem;
-    color: var(--dark-pink);
-    margin-bottom: 8px;
-}
+    .logo h1 {
+        font-size: 1.8rem;
+    }
 
-.empty-state p {
-    font-size: 0.9rem;
-    color: #999;
-    font-weight: normal;
+    .progress-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stats {
+        border-left: none;
+        border-top: 2px dashed var(--pastel-green);
+        padding-top: 10px;
+        padding-left: 0;
+        text-align: center;
+    }
 }
